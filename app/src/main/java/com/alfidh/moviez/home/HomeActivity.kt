@@ -37,12 +37,12 @@ class HomeActivity : AppCompatActivity() {
         homeViewModel.movie.observe(this, { movie ->
             if (movie != null) {
                 when (movie) {
-                    is Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
-                    is Resource.Success -> {
+                    is com.alfidh.moviez.core.data.Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
+                    is com.alfidh.moviez.core.data.Resource.Success -> {
                         binding.progressBar.visibility = View.GONE
                         movieAdapter.setData(movie.data)
                     }
-                    is Resource.Error -> {
+                    is com.alfidh.moviez.core.data.Resource.Error -> {
                         binding.progressBar.visibility = View.GONE
                         binding.viewError.root.visibility = View.VISIBLE
                         binding.viewError.tvError.text =

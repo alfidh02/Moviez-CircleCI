@@ -20,6 +20,7 @@ abstract class NetworkBoundResource<ResultType, RequestType> {
                 }
                 is ApiResponse.Error -> {
                     onFetchFailed()
+                    @Suppress("RemoveExplicitTypeArguments")
                     emit(Resource.Error<ResultType>(apiResponse.errorMessage))
                 }
             }

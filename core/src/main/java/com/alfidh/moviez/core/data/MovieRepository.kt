@@ -18,7 +18,7 @@ class MovieRepository(
 ) : IMovieRepository {
 
     override fun getAllMovie(): Flow<Resource<List<Movie>>> =
-        object : NetworkBoundResource<List<Movie>, List<MovieResponse>>() {
+        object : com.alfidh.moviez.core.data.NetworkBoundResource<List<Movie>, List<MovieResponse>>() {
             override fun loadFromDB(): Flow<List<Movie>> {
                 return localDataSource.getAllMovie().map {
                     DataMapper.mapEntitiesToDomain(it)

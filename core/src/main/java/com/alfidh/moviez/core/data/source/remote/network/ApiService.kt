@@ -1,6 +1,6 @@
 package com.alfidh.moviez.core.data.source.remote.network
 
-import com.alfidh.moviez.BuildConfig
+import com.alfidh.moviez.core.BuildConfig
 import com.alfidh.moviez.core.data.source.remote.response.ListMovieResponse
 import retrofit2.http.GET
 

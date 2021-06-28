@@ -35,13 +35,14 @@ object DataMapper {
             )
         }
 
-    fun mapDomainToEntity(input: Movie) = MovieEntity(
-        id = input.id,
-        title = input.title,
-        date = input.date,
-        image = input.image,
-        rate = input.rate,
-        desc = input.desc,
-        favorite = input.favorite
-    )
+    fun mapDomainToEntity(input: Movie) =
+        MovieEntity(
+            id = input.id,
+            title = input.title,
+            date = input.date,
+            image = input.image,
+            rate = input.rate,
+            desc = input.desc,
+            favorite = input.favorite
+        )
 }

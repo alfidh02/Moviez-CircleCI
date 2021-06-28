@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.alfidh.moviez.R
+import com.alfidh.moviez.core.R
 import com.alfidh.moviez.core.domain.model.Movie
-import com.alfidh.moviez.databinding.ItemListMovieBinding
+import com.alfidh.moviez.core.databinding.ItemListMovieBinding
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 

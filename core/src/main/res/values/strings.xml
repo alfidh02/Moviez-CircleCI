@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="date_dummy">January 16, 2010</string>
+    <string name="title_movie">Behind Her Eyes</string>
+    <string name="rating_number">4.5</string>
+    <string name="star">Star</string>
+</resources>
