@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/black_main"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context=".home.HomeActivity">
 
     <TextView
         android:id="@+id/tv_app_name"
@@ -35,7 +35,7 @@
         android:id="@+id/ib_favorite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_favorite_border"
+        android:src="@drawable/ic_favorite_solid"
         android:background="@android:color/transparent"
         android:contentDescription="@string/favorite"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,11 +59,38 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="14dp"
+        android:overScrollMode="never"
         app:layout_constraintTop_toBottomOf="@id/tv_top_rated"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_list_movie"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/view_error"
+        layout="@layout/view_error"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

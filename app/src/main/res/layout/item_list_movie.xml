@@ -11,6 +11,7 @@
         android:id="@+id/riv_poster"
         android:layout_width="75dp"
         android:layout_height="75dp"
+        android:scaleType="centerCrop"
         tools:src="@tools:sample/avatars"
         app:riv_corner_radius="12dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,13 +19,13 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
-        android:id="@+id/tv_genre"
+        android:id="@+id/tv_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/riv_poster"
         app:layout_constraintTop_toTopOf="@id/riv_poster"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/genre"
+        tools:text="@string/date_dummy"
         android:textColor="@color/black_second"
         android:textSize="12sp"
         android:layout_marginTop="3dp"
@@ -35,13 +36,16 @@
         android:id="@+id/tv_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_genre"
-        app:layout_constraintStart_toStartOf="@id/tv_genre"
+        app:layout_constraintTop_toBottomOf="@id/tv_date"
+        app:layout_constraintStart_toStartOf="@id/tv_date"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/title_movie"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="@string/title_movie"
         android:fontFamily="@font/montserratmedium"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:layout_marginTop="4dp"/>
 
     <ImageView
@@ -49,15 +53,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_star"
-        app:layout_constraintStart_toStartOf="@id/tv_genre"
+        app:layout_constraintStart_toStartOf="@id/tv_date"
         app:layout_constraintTop_toBottomOf="@id/tv_title"
         android:layout_marginTop="4dp"
         android:contentDescription="@string/star"/>
 
     <TextView
+        android:id="@+id/tv_rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/rating_number"
+        tools:text="@string/rating_number"
         app:layout_constraintStart_toEndOf="@id/iv_star"
         app:layout_constraintTop_toTopOf="@id/iv_star"
         app:layout_constraintBottom_toBottomOf="@id/iv_star"

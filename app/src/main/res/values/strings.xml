@@ -3,7 +3,6 @@
     <string name="desc">Watch much easier</string>
     <string name="favorite">Favorite</string>
     <string name="top_rated">Top Rated Movie</string>
-    <string name="genre">Drama</string>
     <string name="title_movie">Behind Her Eyes</string>
     <string name="star">Star</string>
     <string name="rating_number">4.5</string>
@@ -11,9 +10,10 @@
     <string name="detail_movie">Details Movie</string>
     <string name="release_date">Release Date</string>
     <string name="date_dummy">January 16, 2010</string>
-    <string name="genre_text">Genre</string>
     <string name="rate">Rate</string>
     <string name="storyline">Storyline</string>
     <string name="title">Title</string>
     <string name="dummy_desc">After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only who was created in the wake of the accelerator explosion — and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and associates know that Barry is literally the fastest man alive, but it won\'t be long before the world learns what Barry Allen has become…The Flash.</string>
+    <string name="something_wrong">Oops.. something went wrong</string>
+    <string name="no_data">Empty data</string>
 </resources>
