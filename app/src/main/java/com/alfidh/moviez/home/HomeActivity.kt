@@ -1,16 +1,15 @@
 package com.alfidh.moviez.home
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alfidh.moviez.R
-import com.alfidh.moviez.core.data.Resource
 import com.alfidh.moviez.core.ui.MovieAdapter
 import com.alfidh.moviez.databinding.ActivityHomeBinding
 import com.alfidh.moviez.detail.DetailActivity
-import com.alfidh.moviez.favorite.FavoriteActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeActivity : AppCompatActivity() {
@@ -30,8 +29,9 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val uri = Uri.parse("moviez://favorite")
         binding.ibFavorite.setOnClickListener {
-            startActivity(Intent(this@HomeActivity, FavoriteActivity::class.java))
+            startActivity(Intent(Intent.ACTION_VIEW, uri))
         }
 
         homeViewModel.movie.observe(this, { movie ->

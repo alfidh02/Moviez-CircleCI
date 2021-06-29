@@ -63,8 +63,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_top_rated"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:listitem="@layout/item_list_movie"/>
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <ProgressBar
         android:id="@+id/progress_bar"

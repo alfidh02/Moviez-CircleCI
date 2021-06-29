@@ -6,9 +6,11 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alfidh.moviez.core.ui.MovieAdapter
-import com.alfidh.moviez.databinding.ActivityFavoriteBinding
 import com.alfidh.moviez.detail.DetailActivity
+import com.alfidh.moviez.favorite.databinding.ActivityFavoriteBinding
+import com.alfidh.moviez.favorite.di.favoriteModule
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.context.loadKoinModules
 
 class FavoriteActivity : AppCompatActivity() {
 
@@ -19,6 +21,8 @@ class FavoriteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFavoriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        loadKoinModules(favoriteModule)
 
         binding.toolbar.setNavigationOnClickListener { onBackPressed() }
 
