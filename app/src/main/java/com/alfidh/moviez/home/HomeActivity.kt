@@ -7,6 +7,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alfidh.moviez.R
+import com.alfidh.moviez.core.data.Resource
 import com.alfidh.moviez.core.ui.MovieAdapter
 import com.alfidh.moviez.databinding.ActivityHomeBinding
 import com.alfidh.moviez.detail.DetailActivity
@@ -37,12 +38,12 @@ class HomeActivity : AppCompatActivity() {
         homeViewModel.movie.observe(this, { movie ->
             if (movie != null) {
                 when (movie) {
-                    is com.alfidh.moviez.core.data.Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
-                    is com.alfidh.moviez.core.data.Resource.Success -> {
+                    is Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
+                    is Resource.Success -> {
                         binding.progressBar.visibility = View.GONE
                         movieAdapter.setData(movie.data)
                     }
-                    is com.alfidh.moviez.core.data.Resource.Error -> {
+                    is Resource.Error -> {
                         binding.progressBar.visibility = View.GONE
                         binding.viewError.root.visibility = View.VISIBLE
                         binding.viewError.tvError.text =
