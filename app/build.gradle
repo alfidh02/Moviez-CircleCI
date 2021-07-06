@@ -46,4 +46,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.facebook.shimmer:shimmer:$shimmer_version"
+
+    //leak canary
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakcanary_version"
 }
